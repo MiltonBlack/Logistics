@@ -1,10 +1,15 @@
 import React from 'react'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import Login from '../screens/Login';
+import Signup from '../screens/Signup';
 
-type Props = {}
-
-const AuthStack = (props: Props) => {
+const AuthStack = () => {
+  const Stack = createNativeStackNavigator();
   return (
-    <div>AuthStack</div>
+    <Stack.Navigator initialRouteName='Signup'>
+        <Stack.Screen name='Login' component={Login}/>
+        <Stack.Screen name='Signup' component={Signup}/>
+    </Stack.Navigator>
   )
 }
 
