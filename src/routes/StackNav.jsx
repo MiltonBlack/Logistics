@@ -3,6 +3,8 @@ import { View, Text } from 'react-native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import BottomNav from './BottomNav'
 import AuthStack from '../utils/AuthStack';
+import Login from '../screens/Login';
+import Signup from '../screens/Signup';
 
 
 function Splash({ navigation }) {
@@ -25,7 +27,8 @@ const StackNav = () => {
     <Stack.Navigator>
       <Stack.Screen name='Splash' component={Splash} />
       <Stack.Screen name='BottomNav' component={BottomNav} />
-      <Stack.Screen name='AuthStack' component={AuthStack} />
+      <Stack.Screen name='Login' component={Login} />
+      <Stack.Screen name='Signup' component={Signup} />
     </Stack.Navigator>
   )
 }
