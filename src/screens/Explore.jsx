@@ -21,7 +21,7 @@ const Explore = () => {
         <View style={styles.exploreBody}>
           <View style={styles.exploreBodyA}>
             <View style={styles.exploreBodyAContext}>
-              <CategoriesHeader />
+              <CategoriesHeader text='Browse Store Categories'/>
               <ScrollView horizontal={true}>
                 <Categories text='Pets' />
                 <Categories text='Pharmacy' />
@@ -33,7 +33,7 @@ const Explore = () => {
               </ScrollView>
             </View>
             <View style={styles.exploreBodyAContext}>
-              <CategoriesHeader />
+              <CategoriesHeader text='Browse Resturant Categories'/>
               <ScrollView horizontal={true}>
                 <Categories text='Pets' />
                 <Categories text='Pharmacy' />
@@ -45,7 +45,7 @@ const Explore = () => {
               </ScrollView>
             </View>
             <View style={styles.exploreBodyAContext}>
-              <CategoriesHeader />
+              <CategoriesHeader text='Popular on KankiBot Market'/>
               <ScrollView horizontal={true}>
                 <Categories text='Pets' />
                 <Categories text='Pharmacy' />
@@ -59,11 +59,11 @@ const Explore = () => {
           </View>
           <View style={styles.exploreBodyB}>
             <View style={styles.exploreBodyB}>
-              <Text style={{color:'black'}}>New to KankiBot?</Text>
+              <Text style={{color:'black', fontSize:20}}>New to KankiBot?</Text>
               <Card />
             </View>
             <View style={styles.exploreBodyB}>
-              <Text style={{color:'black'}}>Pocket Friendly</Text>
+              <Text style={{color:'black', fontSize:20}}>Pocket Friendly</Text>
               <Card />
             </View>
           </View>
@@ -107,10 +107,12 @@ const styles = StyleSheet.create({
   exploreBodyAContext: {
     flexDirection: 'column',
     height: 155,
+    marginVertical:10
   },
   exploreBodyB: {
+    width:'100%',
     flexDirection: 'column',
-    alignItems: 'center',
+    alignItems: 'flex-start',
     justifyContent: 'center'
   },
   exploreBodyBCard: {

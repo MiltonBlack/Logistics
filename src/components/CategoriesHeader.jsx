@@ -1,11 +1,11 @@
 import { View, Text, StyleSheet } from 'react-native'
 import React from 'react'
 
-export default function CategoriesHeader() {
+export default function CategoriesHeader({text}) {
   return (
     <View style={styles.catHeader}>
       <View>
-        <Text style={styles.catText}>Browse Store Categories</Text>
+        <Text style={styles.catText}>{text}</Text>
       </View>
       <View>
         <Text style={styles.seeAll}>See all</Text>
@@ -19,6 +19,7 @@ const styles = StyleSheet.create({
     flexDirection:'row',
     alignItems: 'center',
     justifyContent: 'space-between',
+    padding:10,
   },
   catText: {
     fontSize: 18,
