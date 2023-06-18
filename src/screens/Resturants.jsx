@@ -1,11 +1,19 @@
 import React from 'react'
-import { Text } from 'react-native'
+import { View, ScrollView } from 'react-native'
+import Card from '../components/Card'
 
 const Resturants = () => {
   return (
-    <Text>
-      Sign Up
-    </Text>
+    <View>
+      <ScrollView>
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </ScrollView>
+    </View>
   )
 }
 
